@@ -9,6 +9,11 @@ const getSquares = (arr) => {
   /**
    * Use .map to return an array of all nums multiplied by 2
    */
+  const timesTwo = arr.map( (num) => {
+    let double = num * 2
+    return double
+  })
+  return timesTwo
 }
 
 const isDivBy3 = (arr) => {
@@ -16,6 +21,11 @@ const isDivBy3 = (arr) => {
    * Use .map to return an array of booleans, if the number is divisible by 3 return true otherwise false
    * * The modulus % operator may be useful *
    */
+  const divis3 = arr.map ( (num) => {
+    return num % 3 === 0
+  })
+  return divis3
+
 }
 
 const filterOdds = (arr) => {
@@ -23,6 +33,10 @@ const filterOdds = (arr) => {
    * Use .filter to return an array of all odd numbers
    * * The modulus % operator may be useful *
    */
+  const oddNums = arr.filter( (num) => {
+    return num % 2 !== 0
+  })
+  return oddNums
 }
 
 const filterEvens = (arr) => {
@@ -30,22 +44,38 @@ const filterEvens = (arr) => {
    * Use .filter to return all even numbers
    * * The modulus % operator may be useful *
    */
+  const evenNums = arr.filter( (num) => {
+    return num % 2 === 0
+  })
+  return evenNums
 }
 const filterDivBy4 = (arr) => {
   /**
    * Use .filter to return all numbers that are divisible by 4
    * * The modulus % operator may be useful *
    */
+  const divis4 = arr.filter( (num) => {
+    return num % 4 === 0
+  })
+  return divis4
 }
 const addAllUp = (arr) => {
   /**
    * Use .reduce to return the total sum of all numbers
    */
+  const sum = arr.reduce( (accumulator, value) => {
+    return accumulator + value
+  })
+  return sum
 }
 const multiplyAllNums = (arr) => {
   /**
    * Use .reduce to return the total product of all numbers
    */
+  const prod = arr.reduce((accumulator, value) => {
+    return accumulator * value
+  })
+  return prod
 }
 
 // BONUS
@@ -55,6 +85,11 @@ const sumSquareAllNums = (arr) => {
    * @param {[Number]} arr will contain numbers from 1-15
    * Your final result should be 1240
    */
+  const sumSqr = arr.reduce( (accumulator, value) => {
+    let sumOfSquares = accumulator + (value * value)
+    return sumOfSquares
+  })
+  return sumSqr
 }
 const addAllAges = (arr) => {
   /**
@@ -66,7 +101,10 @@ const addAllAges = (arr) => {
     ]
     Your final result should be 55
    */
-}
+
+    const sumAge = arr.reduce((accumulator, value) => accumulator + value.age, 0)
+    return sumAge
+  }
 // BONUS
 
 module.exports = {
